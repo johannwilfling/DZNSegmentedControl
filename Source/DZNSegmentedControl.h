@@ -74,7 +74,7 @@
  * @param count A number to display in the segment as its count.
  * @param segment An index number identifying a segment in the control. It must be a number between 0 and the number of segments (numberOfSegments) minus 1; values exceeding this upper range are pinned to it.
  */
-- (void)setCount:(NSNumber *)count forSegmentAtIndex:(NSUInteger)segment;
+- (void)setCount:(NSString *)count forSegmentAtIndex:(NSUInteger)segment;
 
 /**
  * Enables the specified segment.
