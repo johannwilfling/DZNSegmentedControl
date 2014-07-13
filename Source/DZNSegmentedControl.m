@@ -205,15 +205,15 @@
     return [_items objectAtIndex:segment];
 }
 
-- (NSNumber *)countForSegmentAtIndex:(NSUInteger)segment
+- (NSString *)countForSegmentAtIndex:(NSUInteger)segment
 {
     NSString *title = [self stringForSegmentAtIndex:segment];
     NSArray *components = [title componentsSeparatedByString:@"\n"];
     
     if (components.count == 2) {
-        return @([[components objectAtIndex:_inverseTitles ? 1 : 0] intValue]);
+        return [components objectAtIndex:_inverseTitles ? 1 : 0];
     }
-    else return @(0);
+    else return @"0";
 }
 
 - (UIColor *)titleColorForState:(UIControlState)state
@@ -353,7 +353,7 @@
     }
 }
 
-- (void)setCount:(NSNumber *)count forSegmentAtIndex:(NSUInteger)segment
+- (void)setCount:(NSString *)count forSegmentAtIndex:(NSUInteger)segment
 {
     if (!count || !_items) {
         return;
